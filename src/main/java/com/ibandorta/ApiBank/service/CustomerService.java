@@ -42,5 +42,11 @@ public class CustomerService {
         return customerRepository.save(existingCustomer);
     }
 
+    public void deleteCustomer(Long id){
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente no encontrado"));
+        customerRepository.delete(customer);
+    }
+
 
 }
