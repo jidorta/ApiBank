@@ -41,11 +41,28 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<!-- Spring Boot Starter Web (para crear la API REST) -->
+		<!-- Base de datos H2 en memoria (ideal para desarrollo inicial y pruebas locales) -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Lombok (para evitar código repetitivo como getters/setters) -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Spring Boot Starter Test (para futuras pruebas unitarias) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
